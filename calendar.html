@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title></title>
+</head>
+<body onload="Calendar();">
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+div{
+	float:left;	
+	width:20px; 
+	height:20px;	
+	text-align: center;
+	font-weight: bold;
+	font-size:15px;
+}
+</style>
+
+<script>
+function Calendar(){
+	
+	var array=["월", "화", "수", "목", "금", "토", "일"]
+	for(var i=0; i<array.length; i++){
+		var el = document.createElement("div"); // div 생성
+		el.innerHTML = array[i]; // div 안에 요일의 배열을 넣는다. 
+		document.body.appendChild(el);	// 바디의 가장 마지막에 넣는다. appendChild()에는 element만 들어감
+	}
+
+	document.body.appendChild(document.createElement("br")); // 줄바꿈을 위해 br태그를 넣는다. appendChild()에는 element만 들어감
+	
+	for(var j=1; j<8; j++) {
+		var day = document.createElement("div");	// div 생성	
+		day.innerHTML = j; // div 안에 7일을 넣는다.
+	 document.body.appendChild(day);
+	}
+
+	document.body.appendChild(document.createElement("br"));
+
+	for(var j=8; j<15; j++) {
+		var day = document.createElement("div");		
+		day.innerHTML = j;
+	 document.body.appendChild(day);	 
+	}
+
+	document.body.appendChild(document.createElement("br"));
+
+	for(var j=15; j<22; j++) {
+		var day = document.createElement("div");		
+		day.innerHTML = j;
+	 document.body.appendChild(day);
+	}
+
+	document.body.appendChild(document.createElement("br"));
+
+	for(var j=22; j<28; j++) {
+		var day = document.createElement("div");		
+		day.innerHTML = j;
+	 document.body.appendChild(day);
+	}
+
+	document.body.appendChild(document.createElement("br"));
+
+	for(var j=28; j<31; j++) {
+		var day = document.createElement("div");				
+		day.innerHTML = j;
+	 document.body.appendChild(day);
+	}
+
+
+} // //function Calendar ()
+
+
+</script>	
+</body>
+</html>
